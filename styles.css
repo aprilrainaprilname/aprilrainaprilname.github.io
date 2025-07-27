@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
+
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-text: #89cff0;
+  --dark-btn-bg: #3a3a3a;
+
+  --light-bg: #ffffff;
+  --light-text: #f0bde6;
+  --light-btn-bg: #ffe4f2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cascadia Code', monospace;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--dark-btn-bg);
+  color: var(--dark-text);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body.light .toggle-btn {
+  background-color: var(--light-btn-bg);
+  color: var(--light-text);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+nav {
+  font-size: 20px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav span {
+  margin: 0 12px;
+}
+
+/* Page-specific layout */
+
+.page-content {
+  padding: 60px;
+  max-width: 700px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.centered-content img {
+  max-width: 300px;
+  border-radius: 6px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.centered-content img:hover {
+  transform: scale(1.02);
+}

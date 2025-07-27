@@ -2,91 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>aprilrainaprilname</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --dark-bg: #1a1a1a;
-      --dark-text: #89cff0;
-      --dark-btn-bg: #3a3a3a;
-      --light-bg: #ffffff;
-      --light-text: #f0bde6;
-      --light-btn-bg: #ffe4f2;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Cascadia Code', monospace;
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    body.light {
-      background-color: var(--light-bg);
-      color: var(--light-text);
-    }
-
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: none;
-      background-color: var(--dark-btn-bg);
-      color: var(--dark-text);
-      cursor: pointer;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    body.light .toggle-btn {
-      background-color: var(--light-btn-bg);
-      color: var(--light-text);
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 400px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 48px;
-    }
-
-    nav {
-      margin-top: 20px;
-      font-size: 20px;
-    }
-
-    nav a {
-      color: inherit;
-      text-decoration: none;
-      margin: 0 12px;
-    }
-
-    nav span {
-      margin: 0 12px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <button class="toggle-btn" id="modeToggle" onclick="toggleMode()">🌙</button>
-
   <div class="container">
     <h1>aprilrainaprilname</h1>
     <nav>
@@ -94,18 +14,11 @@
       <span>&#9679;</span>
       <a href="poems.html">poems</a>
       <span>&#9679;</span>
-      <a href="short-stories.html">short stories</a>
+      <a href="major-works.html">major works</a>
       <span>&#9679;</span>
       <a href="other.html">other stuff</a>
     </nav>
   </div>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light');
-      const isLight = document.body.classList.contains('light');
-      document.getElementById('modeToggle').textContent = isLight ? '☀️' : '🌙';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
